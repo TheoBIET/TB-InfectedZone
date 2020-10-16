@@ -25,16 +25,16 @@ git clone https://github.com/theoBiet/TB-InfectedZone [esx]/TB-InfectedZone
 
 
 ### Configuration
-### 1 - Ajoutez TB-InfectedZone dans vos resources
+1 - Ajoutez TB-InfectedZone dans vos resources
 
-### 2 - Dans l'Event 'esx_basicneeds:resetStatus' ajoutez la ligne (ci-dessous)
+2 - Dans l'Event 'esx_basicneeds:resetStatus' ajoutez la ligne (ci-dessous)
 `TriggerEvent('esx_status:set', 'bionaz', 200000)`
 
 
-### 3 - Dans l'Event 'esx_basicneeds:healPlayer' ajoutez la ligne (ci-dessous)
+3 - Dans l'Event 'esx_basicneeds:healPlayer' ajoutez la ligne (ci-dessous)
 `TriggerEvent('esx_status:set', 'bionaz', 1000000)`
 
-### 4 - Après l'Event 'esx_status:registerStatus' pour la soif`(ci-dessous)
+4 - Après l'Event 'esx_status:registerStatus' pour la soif`(ci-dessous)
 ```
 TriggerEvent('esx_status:registerStatus', 'thirst', 1000000, '#0C98F1',
 		function(status)
@@ -44,7 +44,7 @@ TriggerEvent('esx_status:registerStatus', 'thirst', 1000000, '#0C98F1',
 		end
 	)
 ```
-### 4.2 - Ajoutez (ci-dessous)
+4.2 - Ajoutez (ci-dessous)
 ```
 TriggerEvent('esx_status:registerStatus', 'bionaz', 1000000, '#FF0016',
     function(status)
