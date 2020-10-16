@@ -9,7 +9,7 @@ TB-InfectedZone est un script qui permet d'avoir des zones d'infection sur la ca
   * [esx_basicneeds](https://github.com/esx-framework/esx_basicneeds)
 
 ### Installation
-# En utilisant Git
+### En utilisant Git
 ```
 cd resources
 git clone https://github.com/theoBiet/TB-InfectedZone [esx]/TB-InfectedZone
@@ -17,7 +17,7 @@ git clone https://github.com/theoBiet/TB-InfectedZone [esx]/TB-InfectedZone
 - Ajoutez `ensure TB-InfectedZone` dans votre server.cfg
 - Passez à la Configuration
 
-# Manuellement
+### Manuellement
 - Téléchargez https://github.com/ESX-Org/esx_policejob/archive/master.zip
 - Mettez `TB-InfectedZone` dans vos ressources
 - Ajoutez `ensure TB-InfectedZone` dans votre server.cfg
@@ -25,16 +25,16 @@ git clone https://github.com/theoBiet/TB-InfectedZone [esx]/TB-InfectedZone
 
 
 ### Configuration
-# 1 - Ajoutez TB-InfectedZone dans vos resources
+### 1 - Ajoutez TB-InfectedZone dans vos resources
 
-# 2 - Dans l'Event 'esx_basicneeds:resetStatus' ajoutez la ligne (ci-dessous)
+### 2 - Dans l'Event 'esx_basicneeds:resetStatus' ajoutez la ligne (ci-dessous)
 `TriggerEvent('esx_status:set', 'bionaz', 200000)`
 
 
-# 2 - Dans l'Event 'esx_basicneeds:healPlayer' ajoutez la ligne (ci-dessous)
+### 3 - Dans l'Event 'esx_basicneeds:healPlayer' ajoutez la ligne (ci-dessous)
 `TriggerEvent('esx_status:set', 'bionaz', 1000000)`
 
-# 3 - Après l'Event 'esx_status:registerStatus' pour la soif`(ci-dessous)
+### 4 - Après l'Event 'esx_status:registerStatus' pour la soif`(ci-dessous)
 ```
 TriggerEvent('esx_status:registerStatus', 'thirst', 1000000, '#0C98F1',
 		function(status)
@@ -44,7 +44,7 @@ TriggerEvent('esx_status:registerStatus', 'thirst', 1000000, '#0C98F1',
 		end
 	)
 ```
-# 3.2 - Ajoutez (ci-dessous)
+### 4.2 - Ajoutez (ci-dessous)
 ```
 TriggerEvent('esx_status:registerStatus', 'bionaz', 1000000, '#FF0016',
     function(status)
