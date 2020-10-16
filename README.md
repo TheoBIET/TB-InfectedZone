@@ -12,13 +12,13 @@ TB-InfectedZone est un script qui permet d'avoir des zones d'infection sur la ca
 ### En utilisant Git
 ```
 cd resources
-git clone https://github.com/theoBiet/TB-InfectedZone [esx]/TB-InfectedZone
+git clone https://github.com/TheoBIET/TB-InfectedZone [esx]/TB-InfectedZone
 ```
 - Ajoutez `ensure TB-InfectedZone` dans votre server.cfg
 - Passez à la Configuration
 
 ### Manuellement
-- Téléchargez https://github.com/ESX-Org/esx_policejob/archive/master.zip
+- Téléchargez https://github.com/TheoBIET/TB-InfectedZone.git
 - Mettez `TB-InfectedZone` dans vos ressources
 - Ajoutez `ensure TB-InfectedZone` dans votre server.cfg
 - Passez à la Configuration
