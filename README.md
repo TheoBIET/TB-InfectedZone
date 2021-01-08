@@ -1,40 +1,40 @@
 # TB-InfectedZone
 
 ### Description
-TB-InfectedZone est un script qui permet d'avoir des zones d'infection sur la carte (actuellement toute la ville est infectée), idéal pour un serveur de survie il a été créé pour le serveur Washingtonia 90's (https://discord.gg/UhUfZMN), il vous permet d'avoir une barre de résistance aux radiations supplémentaire dans esx_basicneeds, et selon si le joueur porte un masque ou non, il perdra plus ou moins de resistance en restant dans la zone jusqu'à mourrir. Vous pouvez le retravailler entièrement à votre manière, j'ai essayé d'être le plus clair dans mes commentaires, celui-ci évoluera sûrement par la suite avec des ajouts d'animation, de meilleures notifications, des items afin d'être plus ou moins résistant.
+TB-InfectedZone is a script that allows you to have infection zones on the map (currently the whole city is infected), ideal for a survival server it was created for the Washingtonia 90's server (https: // discord. gg / UhUfZMN), it allows you to have an additional radiation resistance bar in esx_basicneeds, and depending on whether the player is wearing a mask or not, they will lose more or less resistance and stay in the area until they die. You can rework it entirely in your own way, I tried to be clearer in my comments, it will surely evolve later with animation additions, the best notifications, items to be more or less resistant.
 
 
-### Pré-requis
+### Prerequisites
   * [esx_status](https://github.com/ESX-Org/esx_billing)
   * [esx_basicneeds](https://github.com/esx-framework/esx_basicneeds)
 
 ### Installation
-### En utilisant Git
+### With  Git
 ```
 cd resources
 git clone https://github.com/TheoBIET/TB-InfectedZone [esx]/TB-InfectedZone
 ```
-- Ajoutez `ensure TB-InfectedZone` dans votre server.cfg
-- Passez à la Configuration
+- Add `ensure TB-InfectedZone` in your server.cfg
+- Go to the configuration
 
-### Manuellement
-- Téléchargez https://github.com/TheoBIET/TB-InfectedZone.git
-- Mettez `TB-InfectedZone` dans vos ressources
-- Ajoutez `ensure TB-InfectedZone` dans votre server.cfg
-- Passez à la Configuration
+### Manually
+- Download https://github.com/TheoBIET/TB-InfectedZone.git
+- Put `TB-InfectedZone` in your resources
+- Add `ensure TB-InfectedZone` in your server.cfg
+- Go to the configuration
 
 
 ### Configuration
-1 - Ajoutez TB-InfectedZone dans vos resources
+1 - Add `TB-InfectedZone` in your resources
 
-2 - Dans l'Event 'esx_basicneeds:resetStatus' ajoutez la ligne (ci-dessous)
+2 - In Event 'esx_basicneeds:resetStatus' add the following lines
 `TriggerEvent('esx_status:set', 'bionaz', 200000)`
 
 
-3 - Dans l'Event 'esx_basicneeds:healPlayer' ajoutez la ligne (ci-dessous)
+3 - In Event 'esx_basicneeds:healPlayer' add the following lines
 `TriggerEvent('esx_status:set', 'bionaz', 1000000)`
 
-4 - Après l'Event 'esx_status:registerStatus' pour la soif`(ci-dessous)
+4 - After Event 'esx_status:registerStatus' for the thirst add the following lines
 ```
 TriggerEvent('esx_status:registerStatus', 'thirst', 1000000, '#0C98F1',
 		function(status)
@@ -44,7 +44,7 @@ TriggerEvent('esx_status:registerStatus', 'thirst', 1000000, '#0C98F1',
 		end
 	)
 ```
-4.2 - Ajoutez (ci-dessous)
+4.2 - Add the following lines
 ```
 TriggerEvent('esx_status:registerStatus', 'bionaz', 1000000, '#FF0016',
     function(status)
